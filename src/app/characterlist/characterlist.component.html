@@ -1,0 +1,11 @@
+<app-characterfilter (houseSelected)="onHouseSelected($event)"></app-characterfilter>
+
+<div class="grid">
+  <mat-card *ngFor="let character of characters" class="character-card" (click)="viewDetails(character)" style="cursor: pointer;">
+    <img mat-card-image [src]="character.image || 'https://via.placeholder.com/200x250?text=No+Image'" alt="{{ character.name }}">
+    <mat-card-content>
+      <h3>{{ character.name }}</h3>
+      <p [style.color]="getHouseColor(character.house)">{{ character.house }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>
