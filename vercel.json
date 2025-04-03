@@ -1,7 +1,18 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist/101372167-lab-test2-comp3133",
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+  "version": 2,
+  "builds": [
+    {
+      "src": "angular.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist/101372167-lab-test2-comp3133"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/"
+    }
   ]
 }

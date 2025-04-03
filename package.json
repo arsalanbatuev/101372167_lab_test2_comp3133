@@ -1,14 +1,15 @@
 {
   "name": "101372167-lab-test2-comp3133",
   "version": "0.0.0",
-  "private": true,
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "vercel-build": "ng build --configuration production"
   },
+  "private": true,
   "dependencies": {
     "@angular/cdk": "^19.2.8",
     "@angular/common": "^19.2.0",
